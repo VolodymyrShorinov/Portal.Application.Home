@@ -1,3 +1,4 @@
+import { PortalAuthService, PortalAuthState } from '@3shapeinternal/portal-authentication';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'home-app';
+
+  get user(): string {
+    return this.authState.authState?.userInfo?.firstName + ' ' + this.authState.authState?.userInfo?.lastName;
+  }
+
+  constructor(
+    private readonly authService: PortalAuthService,
+    private readonly authState: PortalAuthState,
+  ) {}
+
+  login(): void {
+    this.authService.startAuthentication();
+  }
+
+  logout(): void {
+    if (this.authState.authState?.isAuthenticated) {
+      this.authService.logout().subscribe();
+    } else {
+      this.authService.startAuthentication();
+    }
+  }
 }

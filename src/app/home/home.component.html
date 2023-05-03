@@ -1,0 +1,10 @@
+<div *ngIf="configData">
+    <h1>Deployed applications</h1>
+    <p>{{configData.generatedComment}}</p>
+    <div *ngFor="let grp of configData.applicationGroups">
+        <h2>{{grp.title}}</h2>
+        <ul>
+            <li *ngFor="let app of grp.applications"><a href="{{app.url}}">{{app.title}}</a></li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,84 @@
+#Version format is: MAJOR.MINOR.PATCH
+#MAJOR version when you make incompatible API changes
+#MINOR version when you add new functionality to API in a backwards compatible manner
+#PATCH version when you make backwards compatible bug fixes
+next-version: 0.0.0
+
+# DEKA-817: Using standard GitVersion commit message to increment SemVer
+#   For complete instructions on how to use this, see https://confluence.3shape.com/x/00zfBw
+commit-message-incrementing: Enabled
+major-version-bump-message: '\+semver:\s?(breaking|major)'
+minor-version-bump-message: '\+semver:\s?(feature|minor)'
+patch-version-bump-message: '\+semver:\s?(fix|patch)'
+no-bump-message: '\+semver:\s?(none|skip)'
+
+# Tag prefixes to [vV]XX.YY.ZZ
+#   Eg: ✔ v1.0.0, V2.3.4
+#       ✖ 1.0.0
+tag-prefix: '[vV]'
+
+# Default versioning mode. Read more: https://gitversion.net/docs/reference/versioning-modes/
+mode: ContinuousDeployment
+
+# Branch configurations
+# For more customizations, see https://gitversion.net/docs/configuration
+branches:
+  master:
+    regex: ^master
+    increment: None
+    tag: beta
+    prevent-increment-of-merged-branch-version: false
+    tracks-release-branches: false
+    is-release-branch: true
+
+  hotfix:
+    regex: '(hot|bug)fix(es)?[/-]'
+    increment: None
+    tag: useBranchName
+    source-branches:
+    - master
+    - feature
+    prevent-increment-of-merged-branch-version: false
+    tracks-release-branches: false
+    is-release-branch: false
+
+  feature:
+    regex: 'feature(s)?[/-]'
+    increment: None
+    tag: useBranchName
+    source-branches:
+    - master
+    prevent-increment-of-merged-branch-version: false
+    tracks-release-branches: false
+    is-release-branch: false
+
+  # Pull/Merge requests
+  pull-request:
+    regex: '(MR-\d+-merge|merge\-requests|mr)[/-]|^(pull|pull\-requests|pr)[/-]'
+    increment: None
+    tag: PR
+    source-branches:
+    - master
+    - feature
+    - hotfix
+    mode: ContinuousDelivery
+    prevent-increment-of-merged-branch-version: false
+    tag-number-pattern: '[/-](?<number>\d+)'
+    tracks-release-branches: false
+    is-release-branch: false
+
+  # Release branch to patch dated releases with bug fixes and for LTS. Release by tagging to this branch
+  release:
+    regex: '^release(s)?[/-]'
+    increment: None
+    tag: beta
+    source-branches:
+    - master
+    mode: ContinuousDelivery
+    prevent-increment-of-merged-branch-version: true
+    tracks-release-branches: false
+    is-release-branch: true
+
+ignore:
+  sha: []
+  

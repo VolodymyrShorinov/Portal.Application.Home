@@ -27,7 +27,8 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/silent-refresh.html"
             ],
             "styles": [
               "src/styles.scss"
@@ -63,6 +64,11 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "sslKey": "ssl/_wildcard.3shapecommunicate.com.local-key.pem",
+            "sslCert": "ssl/_wildcard.3shapecommunicate.com.local.pem",
+            "ssl": true
+          },
           "configurations": {
             "production": {
               "browserTarget": "home-app:build:production"
@@ -100,5 +106,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

@@ -1,0 +1,74 @@
+{
+  "generatedComment": "The comment!!!",
+  "applicationGroups": [
+    {
+      "applications": [
+        {
+          "title": "case-management_0.2.0-alpha0044 (04/27/2023 10:51:31 \u002B00:00)",
+          "url": "/case-management_0.2.0-alpha0044/"
+        },
+        {
+          "title": "case-management_0.2.0-alpha0045 (04/28/2023 07:11:22 \u002B00:00)",
+          "url": "/case-management_0.2.0-alpha0045/"
+        }
+      ],
+      "title": "case-management / dev"
+    },
+    {
+      "applications": [
+        {
+          "title": "case-management_0.2.0-por-208-test-aut0044 (04/25/2023 08:43:24 \u002B00:00)",
+          "url": "/case-management_0.2.0-por-208-test-aut0044/"
+        },
+        {
+          "title": "case-management_0.2.0-por-208-test-aut0045 (04/25/2023 09:11:29 \u002B00:00)",
+          "url": "/case-management_0.2.0-por-208-test-aut0045/"
+        },
+        {
+          "title": "case-management_0.2.0-por-208-test-aut0046 (04/25/2023 10:26:17 \u002B00:00)",
+          "url": "/case-management_0.2.0-por-208-test-aut0046/"
+        },
+        {
+          "title": "case-management_0.2.0-por-208-test-aut0048 (04/26/2023 14:46:59 \u002B00:00)",
+          "url": "/case-management_0.2.0-por-208-test-aut0048/"
+        },
+        {
+          "title": "case-management_0.2.0-por-208-test-aut0050 (04/26/2023 15:06:52 \u002B00:00)",
+          "url": "/case-management_0.2.0-por-208-test-aut0050/"
+        }
+      ],
+      "title": "case-management / feature-POR-208-test-auth-configs-with-href"
+    },
+    {
+      "applications": [
+        {
+          "title": "case-management_0.2.0-por-476-0044 (04/27/2023 10:37:00 \u002B00:00)",
+          "url": "/case-management_0.2.0-por-476-0044/"
+        },
+        {
+          "title": "case-management_0.2.0-por-476-0045 (04/27/2023 20:19:47 \u002B00:00)",
+          "url": "/case-management_0.2.0-por-476-0045/"
+        }
+      ],
+      "title": "case-management / feature-POR-476"
+    },
+    {
+      "applications": [
+        {
+          "title": "case-management_0.2.0-gitversion0038 (04/21/2023 08:51:13 \u002B00:00)",
+          "url": "/case-management_0.2.0-gitversion0038/"
+        }
+      ],
+      "title": "case-management / feature-gitVersion"
+    },
+    {
+      "applications": [
+        {
+          "title": "case-management_0.2.0-beta0037 (04/21/2023 08:56:40 \u002B00:00)",
+          "url": "/case-management_0.2.0-beta0037/"
+        }
+      ],
+      "title": "case-management / master"
+    }
+  ]
+}
