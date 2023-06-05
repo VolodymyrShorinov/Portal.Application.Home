@@ -19,7 +19,7 @@ import { PortalAuthModule } from '@3shapeinternal/portal-authentication';
     PortalAuthModule.forRoot({
       oidcConfig: {
         identityServerUrl: 'https://staging-identity.3shape.com',
-        clientId: 'portal.3shapecommunicate.com',
+        clientId: 'portal_preview',
         responseType: 'code',
         scope:
           'openid api data.users.manage data.companies.manage ' +
