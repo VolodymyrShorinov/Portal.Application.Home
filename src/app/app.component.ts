@@ -1,4 +1,4 @@
-import { PortalAuthService, PortalAuthState } from '@3shapeinternal/portal-authentication';
+import { PortalAuthService, PortalAuthState } from '@3shapeinternal/portal-authentication-ang';
 import { Component } from '@angular/core';
 
 @Component({

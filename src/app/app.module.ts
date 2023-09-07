@@ -5,7 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { PortalAuthModule } from '@3shapeinternal/portal-authentication';
+import { PortalAuthModule } from '@3shapeinternal/portal-authentication-ang';
+import { PortalShellModule } from '@3shapeinternal/portal-shell-ang';
+import { PORTAL_SHELL_APP_CONFIG } from 'src/configs';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,7 @@ import { PortalAuthModule } from '@3shapeinternal/portal-authentication';
   ],
   imports: [
     BrowserModule,
+    PortalShellModule.forRoot(PORTAL_SHELL_APP_CONFIG),
     AppRoutingModule,
     HttpClientModule,
     PortalAuthModule.forRoot({
